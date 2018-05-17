@@ -1,24 +1,13 @@
-# README
+# Mildred Pastryk
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About Me
 
-Things you may want to cover:
+* Career Foundry Student
+* Course: Web Development (2018)
+* Resident Country: Germany
 
-* Ruby version
+## APP Info
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* App for Rails Project
+* Yay! Ruby on Rails!
+* I hope to really learn this well!
