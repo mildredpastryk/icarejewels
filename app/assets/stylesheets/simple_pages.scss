@@ -2,7 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html, body  {
+	height: 100%;
+}
+
 body  {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	color: #0039e6
+}
+
+.navbar-inverse .navbar-collapse  {
+	background-color: #003380
+}
+
+.anchor  {
+	padding-top: 50px;
+}
+
+h1  {
+	text-align: center;
+}
+
+span {
+	padding-right: 10px;
+}
+
+footer  {
+	padding-top: 10px;
+	float: right;
+	text-transform: uppercase;
 }
