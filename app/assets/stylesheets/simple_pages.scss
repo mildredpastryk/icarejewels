@@ -6,9 +6,12 @@ html, body  {
 	height: 100%;
 }
 
+$font-stack: Futura, "Trebuchet MS", Arial, sans-serif; 
+$primary-color: #0039e6;
+
 body  {
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	color: #0039e6
+	font: $font-stack;
+	color: $primary-color;
 }
 
 .navbar-inverse .navbar-collapse  {
@@ -27,8 +30,19 @@ span {
 	padding-right: 10px;
 }
 
-footer  {
-	padding-top: 10px;
-	float: right;
+#footer  {
+	position: fixed;
+	left: 0;
+   	bottom: 0;
+	width: 100%;
 	text-transform: uppercase;
+	text-align: center;
+	background: #4d4d4d;
+	color: #F7A9B9;
+}
+
+img {
+	display: block;
+	width: auto;
+	margin: auto;
 }
