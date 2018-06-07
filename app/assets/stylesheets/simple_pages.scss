@@ -7,15 +7,13 @@ html, body  {
 }
 
 $font-stack: Futura, "Trebuchet MS", Arial, sans-serif; 
-$primary-color: #0039e6;
 
 body  {
 	font: $font-stack;
-	color: $primary-color;
 }
 
 .navbar-inverse .navbar-collapse  {
-	background-color: #003380
+	background-color: #1a1a00;
 }
 
 .anchor  {
@@ -30,6 +28,14 @@ p {
 	font-size: 1.5em;
 }
 
+.product-name {
+	color: #1a0f00;
+}
+
+.icare {
+	color: #998200;
+}
+
 span {
 	padding-right: 10px;
 }
@@ -39,10 +45,9 @@ span {
 	left: 0;
    	bottom: 0;
 	width: 100%;
-	text-transform: uppercase;
 	text-align: center;
-	background: #4d4d4d;
-	color: #F7A9B9;
+	background: #ff9900;
+	color: #000000;
 }
 
 img {

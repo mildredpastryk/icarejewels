@@ -1,0 +1,15 @@
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="col-sm-2 col-md-4">
+      <h1><%= link_to product.name, product %></h1>
+      <%= image_tag(product.image_url, class: "img-responsive") %>
+      <p><%= product.description %></p>
+      <p>Color: <%= product.color %></p>
+      <strong>$ <%= product.price %></strong>
+      <br>
+          <%= link_to 'Show', product %>
+          <%= link_to 'Edit', edit_product_path(product) %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div><!-- /col -->
+  <% end %>
+</div>
