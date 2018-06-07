@@ -19,11 +19,15 @@ body  {
 }
 
 .anchor  {
-	padding-top: 30px;
+	padding-top: 20px;
 }
 
-h1, h2, h3, h4  {
+h1, h2, h3, h4, p  {
 	text-align: center;
+}
+
+p {
+	font-size: 1.5em;
 }
 
 span {
@@ -45,4 +49,5 @@ img {
 	display: block;
 	width: auto;
 	margin: auto;
+	padding-bottom: 20px;
 }
