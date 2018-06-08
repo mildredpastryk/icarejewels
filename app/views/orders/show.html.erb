@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Order Information</h2>
+  <table class="table">
+    <thead>
+      <tr>
+  		<th><strong>Order ID: </strong></th>
+  		<th><strong>Product Name: </strong></th>
+  		<th><strong>Product Price: </strong></th>
+  		<th><strong>Total Price: </strong></th>
+   	  </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @order.id %></td>
+        <td><%= @order.product.name %></td>
+        <td><%= number_to_currency(@order.product.price/1.to_f)  %></td>
+        <td><%= number_to_currency(@order.total/1.to_f) %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
