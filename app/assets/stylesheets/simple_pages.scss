@@ -14,11 +14,15 @@ body  {
 	background-color: #1a1a00;
 }
 
+.navbar-header .navbar-brand{
+   padding: 0px;
+}
+
 .anchor  {
 	padding-top: 20px;
 }
 
-h1, h2, h3, h4, p  {
+h1, h2, h3, h4  {
 	text-align: center;
 }
 
@@ -51,4 +55,8 @@ img {
 	width: auto;
 	margin: auto;
 	padding-bottom: 20px;
+}
+
+#about {
+	text-align: center;
 }

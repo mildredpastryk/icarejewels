@@ -13,8 +13,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
-   
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">    
   </head>
 
 
@@ -29,10 +28,13 @@
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
           </button>
+          <div class="navbar-brand">
+              <%= image_tag("logo.png", alt:"logo", size:"70") %>
+          </div> 
         </div>
 
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav ml-auto">
+          <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "About", simple_pages_about_path %></li>
             <li><%= link_to "Contact", simple_pages_contact_path %></li>
