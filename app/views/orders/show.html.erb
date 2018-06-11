@@ -13,8 +13,8 @@
       <tr>
         <td><%= @order.id %></td>
         <td><%= @order.product.name %></td>
-        <td><%= number_to_currency(@order.product.price/1.to_f)  %></td>
-        <td><%= number_to_currency(@order.total/1.to_f) %></td>
+        <td><%= number_to_currency(@order.product.price)  %></td>
+        <td><%= number_to_currency(@order.total) %></td>
       </tr>
     </tbody>
   </table>

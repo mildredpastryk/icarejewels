@@ -6,7 +6,7 @@
       <h3>Order # <%= order.id %>:
         <%= link_to order.product.name, order %></h3>
       <p><%= order.product.description %></p>
-      <strong>$ <%= order.product.price %></strong>
+      <strong>$ <%= order.total %></strong>
     </div><!-- /col -->
   	<% end %>
   </div>

@@ -18,6 +18,14 @@ body  {
    padding: 0px;
 }
 
+.carousel-indicators .active {
+	background-color: #ff9900;
+}
+
+.carousel-indicators li {
+	background-color: #a3a3c2;
+}
+
 .anchor  {
 	padding-top: 20px;
 }
@@ -54,7 +62,6 @@ img {
 	display: block;
 	width: auto;
 	margin: auto;
-	padding-bottom: 20px;
 }
 
 #about {
