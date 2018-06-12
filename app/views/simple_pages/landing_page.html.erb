@@ -1,7 +1,5 @@
 <div class="container-fluid anchor">
-	<h2>Welcome to iCare Jewels!</h2>
-	<h3>Be glamorous with a heart.</h3>
-	
+  
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   		<!-- Indicators -->
   		<ol class="carousel-indicators">
@@ -12,15 +10,15 @@
 
   		<!-- Wrapper for slides -->
   		<div class="carousel-inner" role="listbox">
-    	<% @products.each do |product|%>
-    	<div class="item<%= " active" if product == @products.first %>">
+    	 <% @products.each do |product|%>
+    	  <div class="item<%= " active" if product == @products.first %>">
       		<%= image_tag(product.image_url, class: "img-responsive") %>
         	<div class="carousel-caption">
         		<h3 class="product-name"><%= product.name %></h3>
-            </div>
-    	</div>
-    	<% end %>
-    </div>
+          </div>
+    	  </div>
+    	 <% end %>
+      </div>
 
   		<!-- Controls -->
   		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -31,6 +29,6 @@
     		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     		<span class="sr-only">Next</span>
   		</a>
-</div>
+  </div>
 
 </div>

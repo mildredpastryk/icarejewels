@@ -10,14 +10,47 @@ body  {
   	min-height: 100vh;
 }
 
-.navbar-inverse .navbar-collapse  {
-	background-color: #1a1a00;
+.main-header {
+	position: relative;
 }
 
-.navbar-header .navbar-brand{
-   padding: 0px;
+.branding {
+	display: block;
+	text_align: center;
 }
 
+// NAV
+.navbar-nav collapse {
+    width: 100%;
+    text-align: left;
+    > li {
+      float: none;
+      display: inline-block;
+    }
+}
+
+.navbar-inverse {
+	background-color: #fff;
+	border-color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+	color: #cc8800;
+}
+
+p, ol, ul, td {
+	font-size: 15px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: #1a1a1a;
+}
+
+.navbar-toggle {
+	background-color: #050a14;
+}
+
+//CAROUSEL
 .carousel-indicators .active {
 	background-color: #ff9900;
 }
@@ -38,18 +71,16 @@ p {
 	font-size: 1.5em;
 }
 
-.product-name {
-	color: #1a0f00;
-}
-
-.icare {
-	color: #998200;
+//PRODUCT FORM
+button, input {
+	color: #000;
 }
 
 span {
 	padding-right: 10px;
 }
 
+//FOOTER
 footer  {
 	margin: auto auto 0 auto;
 	width: 100%;
