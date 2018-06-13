@@ -19,11 +19,26 @@
 
   <body>
 
-      <header class="main-header" role="banner">
-        <div class="branding">
-          <%= link_to image_tag("iCare.png", alt:"logo"), root_path %>
+      <div class="container" id="branding">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6"> 
+            <%= link_to image_tag("iCare_logo.png", alt:"logo"), root_path %>
+          </div>
+          <div class="col-xs-12 col-sm-6"> 
+            <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                <% else %>
+                <strong><%= link_to('Account -Login/Create', new_user_session_path) %></strong>
+            <% end %>
+            <form id="search">
+              <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+                <%= form.text_field :q, id: 'q', value: params[:q] %>
+                <%= form.submit 'Search' %>
+              <% end %>
+            </form>
+          </div>
         </div>
-      </header>
+      </div>
 
       <div class="navigation-wrapper">  
         <nav class="navbar navbar-inverse" role="navigation">
@@ -43,18 +58,19 @@
                 <li><%= link_to "Products", products_path %></li>
                 <li><%= link_to "About", simple_pages_about_path %></li>
                 <li><%= link_to "Contact", simple_pages_contact_path %></li>
-              </ul>
-              <form class="navbar-form navbar-right" role="search">
-              <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-                <%= form.text_field :q, id: 'q', value: params[:q] %>
-                <%= form.submit 'Search' %>
-              <% end %>
-            </form>
+               </ul>
             </div>
           </div>
         </nav>
       </div>
 
+      <!-- Flash Notice Tags -->
+      <% if notice %>
+        <div id="notice" class="alert alert-warning"><%= notice %></div>
+      <% end %>
+      <% if alert %>
+        <div id="alert" class="alert alert-danger"><%= alert %></div>
+      <% end %>
 
     <%= yield %>
 

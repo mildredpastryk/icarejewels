@@ -1,0 +1,59 @@
+<div class="container id=sign_up">
+  <div class="row">
+    <div class="col-xs-12">
+       <h2>Please Sign up <small> Enjoy VIP treats.</small></h2>
+       <hr class="colorgraph">
+    </div>
+  </div>     
+ 
+  <form role="form">
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="form-group">
+              <%= f.label :name, hidden: true %>
+              <%= f.text_field :first_name, autofocus: true, required: true, class:"form-control", placeholder:"Name" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :email, hidden: true %>
+          <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", class:"form-control", placeholder:"Email" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, hidden: true %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, required: true, autocomplete: "off", class:"form-control", placeholder:"Email"  %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password_confirmation, hidden: true %><br />
+          <%= f.password_field :password_confirmation, required: true, autocomplete: "off", class:"form-control", placeholder:"Confirm Password" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Sign up", class: "btn btn-success btn-block" %>
+        </div>
+      </form>
+     
+  <hr class="colorgraph">
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">  
+      <button class="btn btn-success" id="log-in"><%= render "devise/shared/links" %></button>
+      <button class="social-signin facebook">Log in with facebook</button>
+      <button class="social-signin twitter">Log in with Twitter</button>
+      <button class="social-signin google">Log in with Google+</button>
+    </div>
+  </div>  
+ 
+<% end %>
+
+
+
+</div>
+</div>
+

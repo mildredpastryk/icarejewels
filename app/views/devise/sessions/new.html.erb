@@ -1,0 +1,36 @@
+<div class="container id=sign_up">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Log in</h2>
+        <hr class="colorgraph">
+    </div>
+  </div>     
+ 
+  <form role="form">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <div class="form-group">
+      <%= f.label :email, hidden: true %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email",required: true, class:"form-control", placeholder:"Enter Email" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password, hidden: true %>
+      <%= f.password_field :password, autocomplete: "off", required: true, class:"form-control", placeholder:"Enter Password" %> 
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+     <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+    <% end -%>
+  </form>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+  <% end %>
+    <hr class="colorgraph">
+
+<%= render "devise/shared/links" %>
