@@ -1,14 +1,45 @@
 <%# <h1>SimplePages#contact</h1>
 <p>Find me in app/views/simple_pages/contact.html.erb</p> %>
 
-<div class="container-fluid anchor">
-	<h2>You can find us here:</h2>
-	<br>
-	<p><strong>iCare Jewels</strong></p>
-	<p><span class="glyphicon glyphicon-home"></span>Goldstrasse 143</p>
-	<p>10249 Berlin</p>
-	<br>
-	<p><span class="glyphicon glyphicon-phone"></span>Tel. 01523-1234567</p>
-	<p><span class="glyphicon glyphicon-envelope"></span> hello@icarejewels.com</p>
-	<%= image_tag("iCare.jpg", size: "280") %>
+<div class="container anchor" id="contact">
+
+	<div class="row">
+		<div class="col-xs-12col-sm-6 col-md-4" id="contact-info">
+			<h2>You can find us here:</h2>
+			<br>
+			<p><strong>iCare Jewels</strong></p>
+			<p><span class="glyphicon glyphicon-home"></span>Goldstrasse 143</p>
+			<p>10249 Berlin</p>
+			<br>
+			<p><span class="glyphicon glyphicon-phone"></span>Tel. 01523-1234567</p>
+			<p><span class="glyphicon glyphicon-envelope"></span> icarejewels@gmail.com</p>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-md-8">
+		
+			<%= flash[:notice] %>
+
+			<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+		
+			<form>
+				<h2>Contact Us</h2>
+  				<div class="form-group">
+    				<%= form.label :name %>
+    				<%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+  		  		</div>
+  		  		<div class="form-group">
+    				<%= form.label :email %>
+    				<%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+  		 		</div>
+  		  		<div class="form-group">
+    				<%= form.label :message %>
+    				<%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+  		  		</div>
+				<%= form.submit "Send", class: "form_label" %>
+			</form>
+
+			<% end %>
+		</div>
+	</div>
+
 </div>

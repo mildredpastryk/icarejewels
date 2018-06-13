@@ -59,6 +59,10 @@ p, ol, ul, td {
 	background-color: #a3a3c2;
 }
 
+.product-name {
+	color: #ff9900;
+}
+
 .anchor  {
 	padding-top: 20px;
 }
@@ -76,8 +80,22 @@ button, input {
 	color: #000;
 }
 
+//CONTACT
+#contact {
+	padding-bottom: 20px;
+	background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/H7DrgRFFirq65eml/videoblocks-animated-retro-telephone-white-3d-icon-loop-modules-for-edit-with-alpha-matte_sowd0evzz_thumbnail-full04.png");
+	background-attachment: fixed;
+	background-size: cover;
+	width: 100%;
+	display: inline-block;
+}
+
+#contact-info h2 {
+	text-align: left;
+}
+
 span {
-	padding-right: 10px;
+	padding-right: 15px;
 }
 
 //FOOTER
