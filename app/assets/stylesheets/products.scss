@@ -6,3 +6,12 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 }
+
+#product_form {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.product_image {
+	text-align: center;
+}

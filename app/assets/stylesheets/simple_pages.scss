@@ -10,6 +10,19 @@ body  {
   	min-height: 100vh;
 }
 
+.anchor  {
+	padding-top: 20px;
+}
+
+//TYPOGRAPHY
+h1, h2, h3, h4  {
+	text-align: center;
+}
+
+p {
+	font-size: 1.5em;
+}
+
 #branding {
 	display: inline-block;
 }
@@ -18,7 +31,7 @@ body  {
 	padding-top: 80px;
 }
 
-// NAV
+// NAVIGATION
 .navbar-nav {
     width: 100%;
     text-align: center;
@@ -29,8 +42,8 @@ body  {
 }
 
 .navbar-inverse {
-	background-color: #fff;
-	border-color: #fff;
+	background-color: #ffffff;
+	border-color: #ffffff;
 }
 
 .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
@@ -49,10 +62,6 @@ p, ol, ul, td {
 	background-color: #050a14;
 }
 
-hr {
-	color: blue;
-}
-
 //CAROUSEL
 .carousel-indicators .active {
 	background-color: #ff9900;
@@ -66,17 +75,7 @@ hr {
 	color: #ff9900;
 }
 
-.anchor  {
-	padding-top: 20px;
-}
 
-h1, h2, h3, h4  {
-	text-align: center;
-}
-
-p {
-	font-size: 1.5em;
-}
 
 //PRODUCT FORM
 button, input {
@@ -85,13 +84,11 @@ button, input {
 
 //CONTACT
 #contact {
-	padding-bottom: 20px;
+	margin-bottom: 20px;
 	background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/H7DrgRFFirq65eml/videoblocks-animated-retro-telephone-white-3d-icon-loop-modules-for-edit-with-alpha-matte_sowd0evzz_thumbnail-full04.png");
 	background-attachment: fixed;
 	background-size: cover;
-	width: 100%;
 }
-
 
 #contact_us {
 	max-width: 380px;
@@ -106,6 +103,13 @@ span {
 	padding-right: 15px;
 }
 
+//ABOUT
+#about {
+	text-align: center;
+	margin-bottom: 20px;
+	max-width: 800px;
+}
+
 //FOOTER
 footer  {
 	margin: auto auto 0 auto;
@@ -115,12 +119,5 @@ footer  {
 	color: #000000;
 }
 
-img {
-	display: block;
-	width: auto;
-	margin: auto;
-}
 
-#about {
-	text-align: center;
-}
+
