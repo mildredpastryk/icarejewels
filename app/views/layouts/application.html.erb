@@ -28,7 +28,7 @@
             <% if user_signed_in? %>
                 <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
                 <% else %>
-                <strong><%= link_to('Account -Login/Create', new_user_session_path) %></strong>
+                <strong><%= link_to('Account -Login/Sign up', new_user_session_path) %></strong>
             <% end %>
             <form id="search">
               <%= form_with(url: products_path, method: 'get', local: true) do |form| %>

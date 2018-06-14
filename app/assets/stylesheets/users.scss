@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.user_form {
+	max-width: 380px;
+	padding: 15px 35px 45px;
+ 	margin: 0 auto;
+ 	border: 1px solid rgba(0,0,0,0.1);  
+}
 
 .colorgraph {
   height: 5px;
