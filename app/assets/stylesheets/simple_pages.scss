@@ -90,11 +90,16 @@ button, input {
 	background-attachment: fixed;
 	background-size: cover;
 	width: 100%;
-	display: inline-block;
 }
 
-#contact-info h2 {
-	text-align: left;
+
+#contact_us {
+	max-width: 380px;
+	margin: 0 auto;
+}
+
+#contact_info {
+	text-align: center;
 }
 
 span {
