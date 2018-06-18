@@ -5,9 +5,7 @@
 
 	<%= flash[:notice] %>
 
-	<form id="contact_us">
-
-		<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+		<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true, id: "contact_us") do |form| %>
 
 		<h2>Contact Us</h2>
   		<div class="form-group">
@@ -26,7 +24,6 @@
 		<%= form.submit "Send", class: "form_label" %>
 				
 		<% end %>
-	</form>
 
 	<div id="contact_info">
 		<h2>You can find us here:</h2>
