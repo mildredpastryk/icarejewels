@@ -68,4 +68,8 @@ group :production do
   gem 'pg', '~> 0.21'
 end
 
+#Flexible authentication solution for Rails 
 gem 'devise'
+
+#Authorization library for Ruby & RoR
+gem 'cancancan', '~> 1.10'
