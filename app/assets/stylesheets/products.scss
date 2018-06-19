@@ -13,7 +13,21 @@ body {
 	margin: 0 auto;
 }
 
-.product_image {
+.product-image {
 	text-align: center;
 }
 
+hr {
+	height: 2px;
+	background: #b39800;
+	border: none;
+}
+
+.product-info {
+	padding: 10px;
+}
+
+.product-rating {
+	text-align: center;
+	padding: 10px;
+}

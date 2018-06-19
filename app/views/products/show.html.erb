@@ -3,34 +3,34 @@
   <p id="notice"><%= notice %></p>
   
   <div class= "row">
-    <div class= "col-sm-8">
-      <div class="product_image">
-        <%= image_tag(@product.image_url, size: "300") %>
+    <div class= "col-sm-8 col-xs-12">
+      <div class="product-image">
+        <%= image_tag(@product.image_url, size: "380") %>
       </div>
     </div>
 
-    <div class= "col-sm-4">
-      <div class="product_info">
-        <p><strong><%= @product.name %></strong></p>
+    <div class= "col-sm-4 col-xs-12">
+      <div class="product-info">
+        <h3><strong><%= @product.name %></strong></h3>
 
-        <p>
-          <strong>Description:</strong>
-          <%= @product.description %>
-        </p>
+        <p><strong>Description: </strong><%= @product.description %></p>
 
-        <p>
-          <strong>Color:</strong>
-          <%= @product.color %>
-        </p>
+        <p><strong>Color: </strong><%= @product.color %></p>
 
-        <p>
-          <strong>Price: $</strong>
-          <%= @product.price %>
-        </p>
-
-        <%= link_to 'Edit', edit_product_path(@product) %> |
-        <%= link_to 'Back', products_path %>
+        <p><strong>Price: $</strong><%= @product.price %></p>
       </div>
+      <hr>
+      <div class="product-rating">
+        <p><strong>Product Rating</strong></p>
+          <%= @product.comments.rating_desc.first %>
+          <%#<%= @product.comments.order(rating: :desc).first %>
+          <%# <%= @product.highest_rating_comment %>
+          <%# <%= @product.lowest_rating_comment %>
+      </div>
+
+      <hr>
+      <%= link_to 'Edit', edit_product_path(@product) %> |
+      <%= link_to 'Back', products_path %>  
     </div>
   </div>
 </div>
