@@ -30,12 +30,10 @@
                 <% else %>
                 <strong><%= link_to('Account -Login/Sign up', new_user_session_path) %></strong>
             <% end %>
-            <form id="search">
-              <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-                <%= form.text_field :q, id: 'q', value: params[:q], placeholder:"Products" %>
-                <%= form.submit 'Search' %>
-              <% end %>
-            </form>
+            <%= form_with(url: products_path, method: 'get', local: true, id: 'search') do |form| %>  
+              <%= form.text_field :q, id: 'q', value: params[:q], placeholder:"Products" %>
+              <%= form.submit 'Search' %>
+            <% end %>
           </div>
         </div>
       </div>
