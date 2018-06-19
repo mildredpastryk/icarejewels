@@ -22,10 +22,7 @@
       <hr>
       <div class="product-rating">
         <p><strong>Product Rating</strong></p>
-          <%= @product.comments.rating_desc.first %>
-          <%#<%= @product.comments.order(rating: :desc).first %>
-          <%# <%= @product.highest_rating_comment %>
-          <%# <%= @product.lowest_rating_comment %>
+          <%= @product.lowest_rating_comment %>
       </div>
 
       <hr>
