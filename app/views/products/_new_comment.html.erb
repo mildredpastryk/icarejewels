@@ -1,16 +1,18 @@
 <% if signed_in? %>
-  <h4>Add a review:</h4>
+
   <%= form_for([@product, @product.comments.build]) do |f| %>
+ 
+    <div class="form-group">
+      <p><small>
+        <%= f.label :body, "Add Comments" %></small><br>
+        <%= f.text_area :body, class:"form-control" %>
+      </p>
+    </div>  
     <p>
-      <%= f.label :body, "Comments" %><br>
-      <%= f.text_area :body %>
+      <div class="rating"></div>
     </p>
-    <p>
-      <%= f.label :rating %><br>
-      <%= f.text_field :rating, class: "rating" %>
-    </p>  
-    <p>
-      <%= f.submit "Submit" %>
+    <p><small>
+      <%= f.submit "Submit" %></small>
     </p>
   <% end %>
 <% end %>

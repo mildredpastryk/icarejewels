@@ -3,15 +3,17 @@
   <p id="notice"><%= notice %></p>
   
   <div class= "row">
-    <div class= "col-sm-8 col-xs-12">
+    <div class= "col-sm-7 col-xs-12">
       <div class="product-image">
         <%= image_tag(@product.image_url, size: "380") %>
       </div>
     </div>
 
-    <div class= "col-sm-4 col-xs-12">
+    <div class= "col-sm-5 col-xs-12">
       <div class="product-info">
         <h3><strong><%= @product.name %></strong></h3>
+
+        <p><div class="rated" data-score=" <%= @product.average_rating %>"> Average Rating </div></p>
 
         <p><strong>Description: </strong><%= @product.description %></p>
 
@@ -22,7 +24,7 @@
       <hr>
       <div class="product-rating">
         <h3>Customer Reviews</h3>
-          <%= @product.highest_rating_comment %>
+          
           <%= render 'new_comment' %>
           <%= render 'comments' %>
       </div>
