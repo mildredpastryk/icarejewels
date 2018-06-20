@@ -73,3 +73,6 @@ gem 'devise'
 
 #Authorization library for Ruby & RoR
 gem 'cancancan', '~> 1.10'
+
+#Pagination library/plugin
+gem 'will_paginate', '~> 3.1.0'

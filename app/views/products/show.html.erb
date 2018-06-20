@@ -24,14 +24,14 @@
       <hr>
       <div class="product-rating">
         <h3>Customer Reviews</h3>
-          
           <%= render 'new_comment' %>
           <%= render 'comments' %>
+          <%= will_paginate @comments %>
       </div>
 
       <hr>
       <%= link_to 'Edit', edit_product_path(@product) %> |
-      <%= link_to 'Back', products_path %>  
+      <%= link_to 'Products', products_path %>  
     </div>
   </div>
 </div>
