@@ -22,14 +22,16 @@
         <p><strong>Price: $ </strong><%= @product.price %></p>
       </div>
       <hr>
+
       <div class="product-rating">
         <h3>Customer Reviews</h3>
           <%= render 'new_comment' %>
           <%= render 'comments' %>
-          <%= will_paginate @comments %>
       </div>
-
       <hr>
+
+      <div class="comment-pages"><%= will_paginate @comments, :page_links => false %></div>
+         
       <%= link_to 'Edit', edit_product_path(@product) %> |
       <%= link_to 'Products', products_path %>  
     </div>
