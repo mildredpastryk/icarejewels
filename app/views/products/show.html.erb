@@ -17,12 +17,14 @@
 
         <p><strong>Color: </strong><%= @product.color %></p>
 
-        <p><strong>Price: $</strong><%= @product.price %></p>
+        <p><strong>Price: $ </strong><%= @product.price %></p>
       </div>
       <hr>
       <div class="product-rating">
-        <p><strong>Product Rating</strong></p>
-          <%= @product.lowest_rating_comment %>
+        <h3>Customer Reviews</h3>
+          <%= @product.highest_rating_comment %>
+          <%= render 'new_comment' %>
+          <%= render 'comments' %>
       </div>
 
       <hr>
