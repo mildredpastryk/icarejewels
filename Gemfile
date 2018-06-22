@@ -77,3 +77,6 @@ gem 'cancancan', '~> 1.10'
 
 #Pagination library/plugin
 gem 'will_paginate', '~> 3.1.0'
+
+#To write Functional Tests
+gem 'rails-controller-testing'
