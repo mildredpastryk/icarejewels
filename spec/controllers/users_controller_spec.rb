@@ -15,7 +15,7 @@ require 'rails_helper'
   					expect(assigns(:user)).to eq user
   				end
   				it 'can not access the show page of the second user' do 
-  					get :show, params: { id: user.id }
+  					get :show, params: { id: user2.id }
   					expect(response).to redirect_to(root_path)
   					expect(response).to have_http_status(302)
   				end
