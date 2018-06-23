@@ -80,3 +80,6 @@ gem 'will_paginate', '~> 3.1.0'
 
 #To write Functional Tests
 gem 'rails-controller-testing'
+
+#Update 
+gem 'sprockets', '~>3.7.2'
