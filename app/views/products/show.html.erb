@@ -16,8 +16,12 @@
 
         <p><strong>Color: </strong><%= @product.color %></p>
 
-        <p><strong>Price: $ </strong><%= @product.price %></p>
+        <p><strong>Price: € </strong><%= @product.price %></p>
       </div>
+      <%= form_with(url: '/payments/create') do |form| %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+
       <hr>
 
       <div class="product-rating">
@@ -34,3 +38,7 @@
     </div>
   </div>
 </div>
+
+
+
+

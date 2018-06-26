@@ -84,3 +84,6 @@ gem 'rails-controller-testing'
 
 #Update 
 gem 'sprockets', '~>3.7.2'
+
+#For payments
+gem 'stripe'
