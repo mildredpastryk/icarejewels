@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
       @products = Product.search(search_term)
     else
       @products = Product.all
+       logger.debug "Product Count: #{@products.size}"
     end
   end
 
@@ -16,6 +17,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
      @comments = @product.comments.order("created_at DESC").paginate(page: params[:page], per_page: 3)
+     logger.debug "Comment Count: #{@comments.size}"
   end
 
   # GET /products/new
