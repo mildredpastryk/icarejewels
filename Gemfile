@@ -87,3 +87,6 @@ gem 'sprockets', '~>3.7.2'
 
 #For payments
 gem 'stripe'
+
+#Rails Security scanner
+gem 'brakeman', '~> 4.3', '>= 4.3.1'
