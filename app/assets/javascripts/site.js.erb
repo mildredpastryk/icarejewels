@@ -1,4 +1,7 @@
 $(document).on('turbolinks:load', function(){
+    
+    $("#zoom").elevateZoom({tint:true, tintColour:'#F90', tintOpacity:0.5});
+
     $('.rating').raty({
   		starHalf: '<%= asset_path 'star-half.png' %>',
   		starOff: '<%= asset_path 'star-off.png' %>',
