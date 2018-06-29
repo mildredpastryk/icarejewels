@@ -19,8 +19,7 @@ require 'rails_helper'
   				end
   				it 'can not access the show page of the second user' do 
   					get :show, params: { id: @user2.id }
-            byebug
-  					expect(response).to redirect_to(root_path)
+   					expect(response).to redirect_to(root_path)
   					expect(response).to have_http_status(302)
   				end
   			end

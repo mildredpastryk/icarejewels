@@ -3,21 +3,38 @@
 	<div id="icare-carousel" class="carousel slide" data-ride="carousel">
   		<!-- Indicators -->
   		<ol class="carousel-indicators">
-        <% @products.each_with_index do |product, position|%>
-    		  <li data-target="#carousel-example-generic" data-slide-to="<%= position %>" class="<%= position == 0 ? 'active' : '' %>"</li>
-        <% end %>
+      
+         <li data-target="#icare-carousel" data-slide-to="0" class="active"></li>
+         <li data-target="#icare-carousel" data-slide-to="1"></li>
+         <li data-target="#icare-carousel" data-slide-to="2"></li>
   		</ol>
 
   		<!-- Wrapper for slides -->
   		<div class="carousel-inner" role="listbox">
-    	 <% @products.each do |product|%>
-    	  <div class="item<%= " active" if product == @products.first %>">
-      		<%= link_to image_tag(product.image_url, class: "img-responsive"), products_path %>
+    	  <div class="item active">
+      		<%= link_to image_tag("heroimg1.jpg", class: "img-responsive", alt: "woman wearing jewelry"), products_path %>
         	<div class="carousel-caption">
-        		<h3 class="product-name"><%= product.name %></h3>
+        		<h3>Bringing out your inner Glow!</h3>
           </div>
     	  </div>
-    	 <% end %>
+      </div>
+
+      <div class="carousel-inner" role="listbox">
+        <div class="item">
+          <%= link_to image_tag("heroimg2.jpg", class: "img-responsive", alt: "sale announcement"), products_path %>
+          <div class="carousel-caption">
+            <h3>Sophisticated Sparkle ... coming very soon!</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-inner" role="listbox">
+        <div class="item">
+          <%= link_to image_tag("heroimg3.jpg", class: "img-responsive", alt: "woman wearing jewelry"), products_path %>
+          <div class="carousel-caption">
+            <h3>Get Your Sparkle On!</h3>
+          </div>
+        </div>
       </div>
 
   		<!-- Controls -->
