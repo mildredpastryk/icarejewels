@@ -12,11 +12,13 @@
               </tr>
               <tr>
                 <td align="center" valign="top">
-                  <%= @product.image_url %>
+                  <%= if (@product.image_url != nil)
+                    image_tag(@product.image_url, class: "img-responsive") 
+                  end %>
                   <h2 style="color: #474544; font-size: 20px; text-align: center;">
                     <%= @product.name %></h2>
-                  <p style="color: #666666; font-size: 14px; line-height: 22px; text-align: left;"><%= @product.price %></p>
-                    </td>
+                  <p style="color: #666666; font-size: 14px; line-height: 22px; text-align: center;" Price: € ><%= @product.price %></p>
+                </td>
               </tr>
           </table> 
         </td>
@@ -24,14 +26,15 @@
     </table>
 
 
-      <table width="600" border="0" bgcolor="#2B5C6B" cellspacing="0" cellpadding="20">
+      <table width="600" border="0" bgcolor="#806C00" cellspacing="0" cellpadding="20">
         <tr>
           <td align="center" valign="top">
             <table width="100%" border="0" cellspacing="0" cellpadding="20">
               <tr>
                 <td>
-                  <h2 style="color: #F4F4F4; font-size: 20px; text-align: center;">Here are some other things you may like</h2>
-                  <p style="color: #F4F4F4; font-size: 14px; line-height: 22px; text-align: center;">New Products</p>
+                  <h2 style="color: #F4F4F4; font-size: 20px; text-align: center;">Here are some other things you may like.</h2>
+                  <p style="color: #F4F4F4; font-size: 24px; line-height: 22px; text-align: center;">
+                    <%= link_to 'Products', products_path %></p>
                 </td>
               </tr>
             </table>
