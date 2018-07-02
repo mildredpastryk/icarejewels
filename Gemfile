@@ -93,3 +93,6 @@ gem 'brakeman', '~> 4.3', '>= 4.3.1'
 
 #Ruby client for accessing memcached servers
 gem 'dalli'
+
+#Provides a full set of stores (Cache, Session, HTTP Cache) for RoR
+gem 'redis-rails'
