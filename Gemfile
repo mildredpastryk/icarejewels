@@ -90,3 +90,6 @@ gem 'stripe'
 
 #Rails Security scanner
 gem 'brakeman', '~> 4.3', '>= 4.3.1'
+
+#Ruby client for accessing memcached servers
+gem 'dalli'
