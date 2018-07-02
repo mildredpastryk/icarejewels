@@ -13,11 +13,11 @@
               <tr>
                 <td align="center" valign="top">
                   <%= if (@product.image_url != nil)
-                    image_tag(@product.image_url, class: "img-responsive") 
+                    image_tag(@product.image_url, class: "img-responsive", size: "300") 
                   end %>
                   <h2 style="color: #474544; font-size: 20px; text-align: center;">
                     <%= @product.name %></h2>
-                  <p style="color: #666666; font-size: 14px; line-height: 22px; text-align: center;" Price: € ><%= @product.price %></p>
+                  <p style="color: #666666; font-size: 14px; line-height: 22px; text-align: center;"> Price: € <%= @product.price %></p>
                 </td>
               </tr>
           </table> 

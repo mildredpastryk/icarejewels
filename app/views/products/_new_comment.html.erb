@@ -1,6 +1,6 @@
 <% if signed_in? %>
 
-  <%= form_for([@product, @product.comments.build]) do |f| %>
+  <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
  
     <div class="form-group">
       <p><small>
