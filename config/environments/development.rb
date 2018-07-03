@@ -61,4 +61,9 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
+  config.app_generators.javascript_engine = :javascript
+
+  config.web_socket_server_url = "wss://icarejewels.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://icarejewels.herokuapp.com', 'http://icarejewels.herokuapp.com']
+
 end
