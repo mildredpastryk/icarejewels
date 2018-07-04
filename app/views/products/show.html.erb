@@ -1,12 +1,10 @@
 <div class="container">
   <div class= "row" data-product-id="<%= @product.id %>">
     <div class= "col-sm-7 col-xs-12">
-
-      <% cache @product do %>  
       <div class="product-image">
         <%= if (@product.image_url != nil)
           image_tag(@product.image_url, class: "img-responsive", id: "zoom", data_zoom_images:@product.image_url) 
-          end %>
+        end %>
       </div>
     </div>
 
@@ -14,6 +12,8 @@
       <div class="product-info">
         <h3><strong><%= @product.name %></strong></h3>
         <p><div class="rated" data-score=" <%= @product.average_rating %>"> Average Rating </div></p>
+
+      <% cache @product do %>   
         <p><strong>Description: </strong><%= @product.description %></p>
         <p><strong>Color: </strong><%= @product.color %></p>
         <p><strong>Price: </strong><%= number_to_currency(@product.price, unit: '€', precision: 2) %></p>
