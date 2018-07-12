@@ -6,7 +6,11 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    if current_user.admin?
+      @users = User.all
+    else
+      redirect_to :root, notice: 'Reserved for Admin use only.'
+    end  
   end
 
   # GET /users/1
@@ -16,7 +20,11 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    @user = User.new
+    if current_user.admin?
+      @user = User.new
+    else
+      redirect_to :root, notice: 'Reserved for Admin use only.'
+    end 
   end
 
   # GET /users/1/edit

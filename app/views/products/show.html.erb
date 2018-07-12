@@ -20,9 +20,13 @@
       </div>
       <% end %>
 
+      <% if user_signed_in? %>
       <%= form_with(url: '/payments/create') do |form| %>
         <%= hidden_field_tag(:product_id, @product.id) %>
         <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+      <% else %>
+        <button class="btn-info"><%= link_to('Please Login to buy', new_user_session_path) %></button>
       <% end %>
 
       <hr>
@@ -36,9 +40,14 @@
       <hr>
 
       <div class="comment-pages"><%= will_paginate @comments, :page_links => false %></div>
-         
-      <%= link_to 'Edit', edit_product_path(@product) %> |
-      <%= link_to 'Products', products_path %>  
+
+      <% if current_user && current_user.admin? %>
+        <button><%= link_to 'Edit Product', edit_product_path(@product) %></button> 
+      
+      <% end %>
+
+        <button><%= link_to 'All Products', products_path %></button>
+      
     </div>
   </div>
 </div>
