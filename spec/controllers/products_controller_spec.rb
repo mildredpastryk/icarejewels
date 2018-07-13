@@ -42,7 +42,7 @@ describe ProductsController, focus: true, type: :controller do
   context 'POST #create' do
     it 'should render the products page if a product is added' do
       post :create, params: { product: { name: @product.name, description: @product.description, price: @product.price } }
-      expect(response).to redirect_to products_path
+      expect(response).to redirect_to product_path(Product.last)
     end
   end
 
